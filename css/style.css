@@ -1,0 +1,302 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-columns:1fr ;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header" "main" "footer";
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    padding: 0; /* Asegúrate de que no hay padding adicional */
+    gap: 0;
+    background-image: url("../img/fondo.png");
+}
+/*------------------Header(Titulo y categoria)-------------------*/
+header{
+    color: #ffffff;
+    grid-area: header;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding:  1rem;
+    background-color: #04576A; 
+}
+
+header h3{
+    margin-top: 0.5rem;
+    color: #D9E5E7 ;
+}
+
+/*------------------Main(Dibujo Ahorcado y Juego)-------------------*/
+main {
+    grid-area: main;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    margin-top: 1rem;
+    margin: 0;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+/*------------------Dibujo Ahorcado-------------------*/
+.ahorcado{
+    margin: 0rem 0.8rem;
+    display: flex;
+    background-color: #F26250;
+
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 590px;
+}
+
+div .ahorcado{
+    margin: 0 5rem;
+}
+
+#dibujoAhorcado{
+    width: 100%;
+}
+
+/*------------------Juego-------------------*/
+.juego{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.juego h2{
+    margin: 0.8rem;
+    align-self: center;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #F26250;
+}
+
+.juego h3{
+    margin: 0.5rem 0.5rem;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px #F26250;
+}
+/*------------------Botones Juego-------------------*/
+#keys > button {
+    color: #ffffff;
+    background-color: #F26250;
+    font-weight: bolder;
+    width: 15%;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+    padding: 0.2rem;
+    text-transform: uppercase;
+    max-width: 100px;
+    
+}
+
+#keys > button:hover {
+    color:#F26250 ;
+    background-color: #ffffff;
+}
+
+#keys {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    padding: 0.4rem;
+}
+
+#keys > button[disabled] {
+    background-color: #04576A;
+}
+
+#keys > button[disabled]:hover {
+    background-color: #04576A;
+    color: #ffffff;
+}
+
+/* #FFC857 (amarillo cálido) o #50BF81 (verde esmeralda */
+
+/*------------------Footer(Timer y Sonido)-------------------*/
+footer {
+    grid-area: footer; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding:  1rem;
+    margin-top: 0;
+    background-color: #04576A; 
+}
+
+/*------------------Botones Footer-------------------*/
+#soundToggle {
+    display: flex;
+    border-radius: 5px;
+    padding: 0.2rem;
+    justify-self: flex-end;
+    border-color: #ffffff;
+    border: 0px solid;
+}
+
+#soundIcon {
+    width: 1.2rem;
+}
+
+#modo-contrarreloj{
+    background-color: #FFC857;
+    color: #ffffff;
+    padding: 0.4rem;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: 1px solid;
+    font-size: 1.2rem;
+    padding: 0.5rem 1.2rem; 
+    border-color: #ffffff;
+}
+
+#modo-contrarreloj:hover {
+    color:#FFC857 ;
+    background-color: #ffffff;
+}
+
+#cuenta-atras{
+    font-size: 1.5rem;
+    color: #D9E5E7;
+    font-weight: bolder;
+}
+
+#adivinarPalabra{
+    background-color: #FFC857;
+    color: #ffffff;
+    padding: 0.4rem;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: 1px solid;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem; 
+    border-color: #ffffff;
+}
+
+#adivinarPalabra:hover {
+    color:#FFC857 ;
+    background-color: #ffffff;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    
+
+}
+
+.modal-container{
+    width: 70%;
+    max-width: 700px;
+    max-height: 100%;
+    border-radius: 10px;
+    margin: auto;
+    padding: 4rem 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url("../img/modal.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-color: #000;
+}
+
+.modal-title{
+    text-align: center;
+    grid-column: 2;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #d48337;
+    border-color: #ffffff;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+    
+}
+
+.modal-p{
+    grid-column: 2;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 1rem;
+    color: #ffffff;
+    background-color: #04576a4e;
+    border-radius: 6px;
+}
+
+.modal-close{
+    grid-column: 2;
+    text-decoration: none;
+    color: white;
+    background-color: #F26250;
+    padding: 1rem 2rem;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 600;
+    transition: background-color .3s;
+    text-align: center;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    z-index: 1000;
+}
+
+.modal-close:hover{
+    color: #F26250;
+    background-color: white;
+}
+
+@media (max-width: 600px) {
+    /* Media querie para el Modal */
+    .modal-container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        max-width: 400px;
+        max-height: 100%;
+        border-radius: 10px;
+        background-image: url("../img/modal.jpg");
+        background-color: #000;
+        background-position: -1px 0;
+    }
+
+    .modal-close{
+        text-decoration: none;
+        color: white;
+        background-color: #F26250;
+        padding: 0.5rem 1rem;
+        border: 1px solid;
+        border-radius: 6px;
+        display: inline-block;
+        transition: background-color .3s;
+        text-align: center;
+    }
+
+  }

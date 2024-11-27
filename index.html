@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h1>Juego del Ahorcado</h1>
+        <h3 id="h3">Categoria: XYZ</h3>
+        <p id="pista">Placeholder Pista</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="ahorcado">
+        <img id="dibujoAhorcado" src="fotos/ahorcado0.jpg" alt="Ahorcado" />
+      </div>
+      <div class="juego">
+        <h2 id="h2"></h2>
+        <button id="adivinarPalabra">Adivinar palabra completa</button>
+        <h3>Selecciona una letra para adivinar:</h3>
+        <section id="keys"></section>
+      </div>
+      <section class="modal">
+        <div class="modal-container">
+          <h2 class="modal-title">¡Ganaste!</h2>
+          <p class="modal-p">
+            ¡Gracias por jugar en nuestro proyecto del Ahorcado! Somos el grupo
+            4 y esperamos que te haya gustado el juego.
+          </p>
+          <a href="#" class="modal-close"
+            >¡Presiona aquí para jugar de nuevo!</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p id="cuenta-atras">15s</p>
+      <button id="modo-contrarreloj">Modo Contrarreloj</button>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
